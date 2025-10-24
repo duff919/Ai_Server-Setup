@@ -1,0 +1,19 @@
+Ubuntu Server Setup
+Download Rufus from - https://github.com/pbatard/rufus/releases/download/v4.11/rufus-4.11.exe
+Download Ubuntu 22.04.5 LTS (Jammy Jellyfish) from - https://releases.ubuntu.com/22.04.5/ubuntu-22.04.5-live-server-amd64.iso?_gl=1*1bbg6ol*_gcl_au*MjA3NzQ0Nzg4LjE3NjEzMTYzMTg
+Add Ubuntu 22.04.5.iso file to Rufus to make a bootable drive
+Insert USB into your Ai Server and power on, ensure you select USB to boot from (hit F12, during boot process)
+Welcome screen -Select English and done
+Keyboard coinfiguration - Layout and Variant = English and done
+Choose the type of installation - Unbuntu Server (default) and done
+Network configuration - enc2, eth, DHCPv4 192.158.1.11/24 and done ***this could be something different so just use what is there***
+Proxy configuration - none and done
+Now it validates the mirror address: http://us.archive.ubuntu.com/ubuntu/, if they are, select done
+Guided storage configuration - Use entire disk for installation and done
+Storage configuration - just take the defaults for now and we will change the root drive later to increase it from 100 GB to full size of drive via Webmin
+Confirm destructive action - continue
+Profile configuration - your name: Duff, your servers name: AiServer, Pick a username: Duff, Choose a password: password, confirm your password: password, done
+Upgrade to Ubuntu Pro - Skip for now, continue
+SSH configuration - install OpenSSH server, done
+Featured servre snaps, don't select any at this time, done
+It will now go through the installation of Ubuntu. remove USB and select reboot now
